@@ -36,13 +36,11 @@ html, body, #root {
 
 /* ── App Shell ───────────────────────────────────────────────── */
 .app-shell {
-  min-height: 100dvh;
-  min-height: 100svh;
+  height: 100dvh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: max(20px, env(safe-area-inset-top)) 18px max(20px, env(safe-area-inset-bottom));
+  align-items: stretch;
   background:
     radial-gradient(1200px 420px at 50% -80px, rgba(196, 92, 38, 0.08), transparent 60%),
     var(--ivory);
@@ -51,22 +49,34 @@ html, body, #root {
 /* ── Card ────────────────────────────────────────────────────── */
 .card {
   width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
+  flex: 1;                      /* fill the full app-shell height */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between; /* progress↑  content↕  buttons↓ */
+  padding: max(16px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
   background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 20px 4px 24px;
+  animation: fadeIn 0.35s ease;
+  overflow-y: auto;
+}
+
+/* Middle section — question emoji + text + audio */
+.card-body {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  box-shadow: none;
-  animation: fadeIn 0.35s ease;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
 }
 
-.card--center { gap: 22px; }
+/* Processing / Result — center everything */
+.card--center {
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -377,11 +387,28 @@ html, body, #root {
 }
 
 @media (min-width: 480px) {
+  .app-shell {
+    align-items: center;
+    justify-content: center;
+    padding: 24px 18px;
+  }
+
   .card {
+    flex: none;
+    max-width: 430px;
+    min-height: auto;
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 36px 28px;
     box-shadow: var(--shadow);
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    overflow-y: visible;
+  }
+
+  .card-body {
+    flex: none;
   }
 }

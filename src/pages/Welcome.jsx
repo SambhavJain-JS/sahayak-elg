@@ -6,28 +6,27 @@ export default function Welcome({ onStart }) {
 
   return (
     <div className="card">
-      <div className="flag-stripe" />
-
-      <div className="hero-emoji">🏥</div>
-
-      <div className="title">आयुष्मान साथी</div>
-
-      <div className="subtitle">
-        आयुष्मान भारत योजना में अपनी पात्रता जानिए
-        <br />
-        — बिल्कुल मुफ़्त, सीधे आपके फ़ोन पर
+      {/* Middle: branding — vertically centered */}
+      <div className="card-body">
+        <div className="flag-stripe" />
+        <div className="hero-emoji">🏥</div>
+        <div className="title">आयुष्मान साथी</div>
+        <div className="subtitle">
+          आयुष्मान भारत योजना में अपनी पात्रता जानिए
+          <br />
+          — बिल्कुल मुफ़्त, सीधे आपके फ़ोन पर
+        </div>
+        <AudioPlayer ttsFallback={welcomeText} autoPlay={true} />
       </div>
 
-      <AudioPlayer ttsFallback={welcomeText} autoPlay={true} />
-
-      <div className="divider" />
-
-      <button className="btn-start" onClick={onStart}>
-        ▶ &nbsp; शुरू करें
-      </button>
-
-      <div className="fine-print">
-        🔒 कोई जानकारी नहीं रखी जाएगी • बिल्कुल मुफ़्त
+      {/* Bottom actions */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "12px", width: "100%" }}>
+        <button className="btn-start" onClick={onStart}>
+          ▶ &nbsp; शुरू करें
+        </button>
+        <div className="fine-print">
+          🔒 कोई जानकारी नहीं रखी जाएगी • बिल्कुल मुफ़्त
+        </div>
       </div>
     </div>
   );

@@ -24,24 +24,20 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
         </div>
       </div>
 
-      {/* Question emoji/image */}
-      <div className="hero-emoji hero-emoji--md">
-        {question.emoji}
+      {/* Middle: emoji + text + audio — vertically centered */}
+      <div className="card-body">
+        <div className="hero-emoji hero-emoji--md">
+          {question.emoji}
+        </div>
+        <div className="question-text">{question.textHi}</div>
+        <AudioPlayer
+          audioFile={question.audioFile}
+          ttsFallback={question.ttsFallback}
+          autoPlay={true}
+        />
       </div>
 
-      {/* Question text */}
-      <div className="question-text">{question.textHi}</div>
-
-      {/* Audio replay */}
-      <AudioPlayer
-        audioFile={question.audioFile}
-        ttsFallback={question.ttsFallback}
-        autoPlay={true}
-      />
-
-      <div className="divider" />
-
-      {/* YES / NO buttons */}
+      {/* YES / NO buttons — anchored at bottom */}
       <div className="yes-no-row">
         <button className="btn-yes" onClick={() => onAnswer("yes")}>
           <span className="thumb">👍</span>
