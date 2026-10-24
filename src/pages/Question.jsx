@@ -12,7 +12,7 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
   return (
     <div className="card">
       {/* Progress */}
-      <div className="progress-wrap" style={{ width: "100%" }}>
+      <div className="progress-wrap">
         <div className="progress-label">
           Sawaal {questionIndex + 1} / {total}
         </div>
@@ -25,7 +25,7 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
       </div>
 
       {/* Question emoji/image */}
-      <div className="hero-emoji" style={{ fontSize: "64px" }}>
+      <div className="hero-emoji hero-emoji--md">
         {question.emoji}
       </div>
 
@@ -44,11 +44,11 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
       {/* YES / NO buttons */}
       <div className="yes-no-row">
         <button className="btn-yes" onClick={() => onAnswer("yes")}>
-          <span style={{ fontSize: "36px" }}>👍</span>
+          <span className="thumb">👍</span>
           <span className="btn-label">Haan</span>
         </button>
         <button className="btn-no" onClick={() => onAnswer("no")}>
-          <span style={{ fontSize: "36px" }}>👎</span>
+          <span className="thumb">👎</span>
           <span className="btn-label">Nahi</span>
         </button>
       </div>

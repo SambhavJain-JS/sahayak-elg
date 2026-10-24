@@ -26,7 +26,7 @@ export default function Welcome({ onStart }) {
         ▶ &nbsp; Shuru Karein
       </button>
 
-      <div className="subtitle" style={{ fontSize: "11px", opacity: 0.5 }}>
+      <div className="fine-print">
         🔒 Koi data save nahi hoga • Bilkul muft
       </div>
     </div>
