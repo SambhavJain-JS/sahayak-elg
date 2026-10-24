@@ -2,7 +2,7 @@ import AudioPlayer from "../components/AudioPlayer";
 
 export default function Welcome({ onStart }) {
   const welcomeText =
-    "Namaste. Hum aapko Ayushman Bharat yojana ke baare mein batayenge aur check karenge ki kya aap eligible hain. Shuru karne ke liye button dabayein.";
+    "नमस्ते। हम आपको आयुष्मान भारत योजना के बारे में बताएँगे और जाँच करेंगे कि क्या आप पात्र हैं। शुरू करने के लिए बटन दबाएँ।";
 
   return (
     <div className="card">
@@ -10,12 +10,12 @@ export default function Welcome({ onStart }) {
 
       <div className="hero-emoji">🏥</div>
 
-      <div className="title">Ayushman Saathi</div>
+      <div className="title">आयुष्मान साथी</div>
 
       <div className="subtitle">
-        Ayushman Bharat yojana mein aapki eligibility janiye
+        आयुष्मान भारत योजना में अपनी पात्रता जानिए
         <br />
-        — bilkul muft, seedha aapke phone par
+        — बिल्कुल मुफ़्त, सीधे आपके फ़ोन पर
       </div>
 
       <AudioPlayer ttsFallback={welcomeText} autoPlay={true} />
@@ -23,11 +23,11 @@ export default function Welcome({ onStart }) {
       <div className="divider" />
 
       <button className="btn-start" onClick={onStart}>
-        ▶ &nbsp; Shuru Karein
+        ▶ &nbsp; शुरू करें
       </button>
 
       <div className="fine-print">
-        🔒 Koi data save nahi hoga • Bilkul muft
+        🔒 कोई जानकारी नहीं रखी जाएगी • बिल्कुल मुफ़्त
       </div>
     </div>
   );

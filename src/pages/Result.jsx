@@ -2,50 +2,50 @@ import { useState } from "react";
 import AudioPlayer from "../components/AudioPlayer";
 
 const FOLLOW_UP_OPTIONS = [
-  { emoji: "📝", label: "Registration kaise karein?", type: "registration" },
-  { emoji: "📄", label: "Kaun se documents chahiye?", type: "documents" },
-  { emoji: "🛡️", label: "Scam se kaise bachein?", type: "safety" },
-  { emoji: "🏥", label: "Hospital kahan hai?", type: "hospital" },
+  { emoji: "📝", label: "पंजीकरण कैसे करें?", type: "registration" },
+  { emoji: "📄", label: "कौन से दस्तावेज़ चाहिए?", type: "documents" },
+  { emoji: "🛡️", label: "धोखाधड़ी से कैसे बचें?", type: "safety" },
+  { emoji: "🏥", label: "अस्पताल कहाँ है?", type: "hospital" },
 ];
 
 const INFO_CARDS = {
   registration: {
     emoji: "📝",
-    title: "Registration Steps",
+    title: "पंजीकरण के चरण",
     content: [
-      "1️⃣ Nazdiki CSC Center ya empanelled hospital jayen",
-      "2️⃣ Aadhaar card aur ration card saath le jayen",
-      "3️⃣ Ayushman card banwa lein — bilkul MUFT",
-      "4️⃣ Official site: pmjay.gov.in",
+      "1️⃣ नज़दीकी सीएससी केंद्र या सूचीबद्ध अस्पताल जाएँ",
+      "2️⃣ आधार कार्ड और राशन कार्ड साथ ले जाएँ",
+      "3️⃣ आयुष्मान कार्ड बनवा लें — बिल्कुल मुफ़्त",
+      "4️⃣ आधिकारिक वेबसाइट: pmjay.gov.in",
     ],
   },
   documents: {
     emoji: "📄",
-    title: "Zaroori Documents",
+    title: "ज़रूरी दस्तावेज़",
     content: [
-      "✅ Aadhaar Card (sabse zaroori)",
-      "✅ Ration Card (agar ho)",
-      "✅ Voter ID ya koi government ID",
-      "❌ Koi bhi PAISA mat dena — yeh MUFT hai!",
+      "✅ आधार कार्ड (सबसे ज़रूरी)",
+      "✅ राशन कार्ड (अगर हो)",
+      "✅ वोटर पहचान पत्र या कोई सरकारी पहचान पत्र",
+      "❌ कोई भी पैसा मत देना — यह मुफ़्त है!",
     ],
   },
   safety: {
     emoji: "🛡️",
-    title: "Scam se Bachao",
+    title: "धोखाधड़ी से बचाव",
     content: [
-      "❌ Koi bhi paisa mat dena — Ayushman MUFT hai",
-      "❌ OTP kisi ko mat batana",
-      "❌ Private agent par mat bharosa karna",
-      "✅ Helpline: 14555 (FREE call)",
+      "❌ कोई भी पैसा मत देना — आयुष्मान मुफ़्त है",
+      "❌ ओटीपी किसी को मत बताना",
+      "❌ निजी एजेंट पर भरोसा न करें",
+      "✅ हेल्पलाइन: 14555 (मुफ़्त कॉल)",
     ],
   },
   hospital: {
     emoji: "🏥",
-    title: "Hospital Dhundhein",
+    title: "अस्पताल खोजें",
     content: [
-      "pmjay.gov.in par 'Hospital Locator' kholein",
-      "Ya helpline 14555 par call karein",
-      "29,000+ hospitals poore India mein",
+      "pmjay.gov.in पर 'अस्पताल खोजें' खोलें",
+      "या हेल्पलाइन 14555 पर कॉल करें",
+      "29,000+ अस्पताल पूरे भारत में",
     ],
   },
 };
@@ -61,15 +61,15 @@ export default function Result({ result }) {
 
   const badgeClass = isEligible ? "eligible" : isGeneral ? "partial" : "ineligible";
   const badgeText  = isEligible
-    ? "✅ Eligible"
+    ? "✅ पात्र"
     : isGeneral
-    ? "⚠️ Verify Karein"
+    ? "⚠️ जाँच करें"
     : needsAadhaar
-    ? "🪪 Aadhaar Chahiye"
-    : "❌ Eligible Nahi";
+    ? "🪪 आधार चाहिए"
+    : "❌ पात्र नहीं";
 
   const heroEmoji = isEligible ? "🎉" : needsAadhaar ? "🪪" : isGeneral ? "ℹ️" : "😔";
-  const resultTTS = result.message_hi || "Eligibility check complete ho gaya hai.";
+  const resultTTS = result.message_hi || "पात्रता जाँच पूरी हो गई है।";
 
   // Drill-down info card view
   if (selectedInfo) {
@@ -91,7 +91,7 @@ export default function Result({ result }) {
           className="btn-ghost"
           onClick={() => setSelectedInfo(null)}
         >
-          ← Wapas jayen
+          ← वापस जाएँ
         </button>
       </div>
     );
@@ -134,7 +134,7 @@ export default function Result({ result }) {
       <div className="divider" />
 
       <div className="subtitle">
-        Aur kya jaanna chahte hain?
+        और क्या जानना चाहते हैं?
       </div>
 
       <div className="option-grid">

@@ -40,9 +40,9 @@ html, body, #root {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding: max(16px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+  align-items: center;
+  justify-content: center;
+  padding: max(20px, env(safe-area-inset-top)) 18px max(20px, env(safe-area-inset-bottom));
   background:
     radial-gradient(1200px 420px at 50% -80px, rgba(196, 92, 38, 0.08), transparent 60%),
     var(--ivory);
@@ -53,16 +53,15 @@ html, body, #root {
   width: 100%;
   max-width: 430px;
   margin: 0 auto;
-  min-height: calc(100dvh - 40px);
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 12px 2px 8px;
+  padding: 20px 4px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 18px;
+  justify-content: flex-start;
+  gap: 20px;
   box-shadow: none;
   animation: fadeIn 0.35s ease;
 }
@@ -378,13 +377,7 @@ html, body, #root {
 }
 
 @media (min-width: 480px) {
-  .app-shell {
-    align-items: center;
-    justify-content: center;
-  }
-
   .card {
-    min-height: auto;
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: var(--radius);

@@ -106,27 +106,27 @@ export default function App() {
       return {
         eligible: true, result: "eligible", pathway: "vay_vandana_yojana",
         top_up: existing,
-        message_hi: "Aapke jawaabon ke aadhar par, aap Ayushman Bharat Vay Vandana Yojana ke liye eligible ho sakte hain. 5 lakh rupaye tak ka muft ilaaj milega.",
-        benefits: ["5 lakh rupaye tak ka muft ilaaj", "29,000+ hospitals mein valid", "Koi premium nahi — bilkul muft", "Cashless treatment"],
+        message_hi: "आपके जवाबों के आधार पर, आप आयुष्मान भारत वय वंदना योजना के लिए पात्र हो सकते हैं। 5 लाख रुपये तक का मुफ़्त इलाज मिलेगा।",
+        benefits: ["5 लाख रुपये तक का मुफ़्त इलाज", "29,000+ अस्पतालों में मान्य", "कोई प्रीमियम नहीं — बिल्कुल मुफ़्त", "कैशलेस इलाज"],
       };
     }
     if (age70 && india && !aadhaar) {
       return {
         eligible: false, result: "needs_aadhaar", pathway: "vay_vandana_yojana",
-        message_hi: "Aap 70 saal se upar hain aur eligible lag rahe hain, lekin Aadhaar card zaroori hai.",
-        next_steps: ["Nazdiki Aadhaar seva kendra jayen", "uidai.gov.in par appointment len"],
+        message_hi: "आप 70 साल से ऊपर हैं और पात्र लग रहे हैं, लेकिन आधार कार्ड ज़रूरी है।",
+        next_steps: ["नज़दीकी आधार सेवा केंद्र जाएँ", "uidai.gov.in पर अपॉइंटमेंट लें"],
       };
     }
     if (!age70 && india) {
       return {
         eligible: null, result: "general_pathway", pathway: "pmjay_secc",
-        message_hi: "Aap 70 saal se kam hain. PM-JAY eligibility SECC list par depend karti hai. CSC center par check karein.",
-        next_steps: ["pmjay.gov.in par apna naam check karein", "Nazdiki CSC center jayen"],
+        message_hi: "आप 70 साल से कम हैं। पीएम-जेएवाई पात्रता एसईसीसी सूची पर निर्भर करती है। सीएससी केंद्र पर जाँच करें।",
+        next_steps: ["pmjay.gov.in पर अपना नाम जाँच करें", "नज़दीकी सीएससी केंद्र जाएँ"],
       };
     }
     return {
       eligible: false, result: "not_eligible", pathway: "none",
-      message_hi: "Is yojana ka labh sirf India mein rehne wale nagrikon ke liye hai.",
+      message_hi: "इस योजना का लाभ सिर्फ़ भारत में रहने वाले नागरिकों के लिए है।",
       next_steps: [],
     };
   }

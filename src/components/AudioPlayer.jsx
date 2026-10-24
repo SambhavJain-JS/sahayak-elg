@@ -47,8 +47,8 @@ export default function AudioPlayer({ audioFile, ttsFallback, autoPlay = true })
   }
 
   return (
-    <button className="audio-btn" onClick={playAudio} title="Audio dobara sunein">
-      🔊 <span>Dobara sunein</span>
+    <button className="audio-btn" onClick={playAudio} title="ऑडियो दोबारा सुनें">
+      🔊 <span>दोबारा सुनें</span>
     </button>
   );
 }

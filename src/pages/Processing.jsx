@@ -4,10 +4,10 @@ export default function Processing() {
       <div className="hero-emoji hero-emoji--static">🧠</div>
       <div className="spinner" />
       <div className="processing-text">
-        Aapke jawaabon ka viश्लेषण ho raha hai…
+        आपके जवाबों का विश्लेषण हो रहा है…
       </div>
       <div className="fine-print">
-        Kripya prateeksha karein
+        कृपया प्रतीक्षा करें
       </div>
     </div>
   );

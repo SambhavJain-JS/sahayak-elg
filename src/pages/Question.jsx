@@ -14,7 +14,7 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
       {/* Progress */}
       <div className="progress-wrap">
         <div className="progress-label">
-          Sawaal {questionIndex + 1} / {total}
+          सवाल {questionIndex + 1} / {total}
         </div>
         <div className="progress-track">
           <div
@@ -45,11 +45,11 @@ export default function Question({ question, questionIndex, total, onAnswer }) {
       <div className="yes-no-row">
         <button className="btn-yes" onClick={() => onAnswer("yes")}>
           <span className="thumb">👍</span>
-          <span className="btn-label">Haan</span>
+          <span className="btn-label">हाँ</span>
         </button>
         <button className="btn-no" onClick={() => onAnswer("no")}>
           <span className="thumb">👎</span>
-          <span className="btn-label">Nahi</span>
+          <span className="btn-label">नहीं</span>
         </button>
       </div>
     </div>

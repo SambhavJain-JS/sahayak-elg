@@ -8,31 +8,31 @@ export const questions = [
   {
     id: "age_70_plus",
     emoji: "👴",
-    textHi: "Kya aapki umar 70 saal ya usse zyada hai?",
+    textHi: "क्या आपकी उम्र 70 साल या उससे ज़्यादा है?",
     audioFile: "/audio/q1_age.mp3",
     // fallback TTS text if audio file not found
-    ttsFallback: "Kya aapki umar 70 saal ya usse zyada hai?",
+    ttsFallback: "क्या आपकी उम्र 70 साल या उससे ज़्यादा है?",
   },
   {
     id: "resident_india",
     emoji: "🇮🇳",
-    textHi: "Kya aap India mein rehte hain?",
+    textHi: "क्या आप भारत में रहते हैं?",
     audioFile: "/audio/q2_resident.mp3",
-    ttsFallback: "Kya aap India mein rehte hain?",
+    ttsFallback: "क्या आप भारत में रहते हैं?",
   },
   {
     id: "has_aadhaar",
     emoji: "🪪",
-    textHi: "Kya aapke paas Aadhaar card hai?",
+    textHi: "क्या आपके पास आधार कार्ड है?",
     audioFile: "/audio/q3_aadhaar.mp3",
-    ttsFallback: "Kya aapke paas Aadhaar card hai?",
+    ttsFallback: "क्या आपके पास आधार कार्ड है?",
   },
   {
     id: "existing_scheme",
     emoji: "🏥",
-    textHi: "Kya aap pehle se kisi sarkari bima yojana mein shamil hain?",
+    textHi: "क्या आप पहले से किसी सरकारी बीमा योजना में शामिल हैं?",
     audioFile: "/audio/q4_existing.mp3",
-    ttsFallback: "Kya aap pehle se kisi sarkari bima yojana mein shamil hain?",
+    ttsFallback: "क्या आप पहले से किसी सरकारी बीमा योजना में शामिल हैं?",
   },
 ];
 
